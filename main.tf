@@ -76,7 +76,7 @@ resource "aws_elb" "prod_web" {
 
 resource "aws_launch_template" "prod_web" {
   name_prefix   = "prod-web"
-  image_id      = "ami-0e99618abe1076b3a"
+  image_id      = var.webserver_ami
   instance_type = "t2.micro"
 }
 
